@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="250" viewBox="0 0 980 250" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#5b6472"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="250" rx="14" fill="#ffffff"/>
+
+  <!-- 1 depth video -->
+  <rect x="20" y="30" width="165" height="110" rx="10" fill="#e8f1fb" stroke="#3b7dd8" stroke-width="1.5"/>
+  <text x="102" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d3f6e">1. Depth video</text>
+  <text x="102" y="82" text-anchor="middle" font-size="12" fill="#334">RealSense D405</text>
+  <text x="102" y="100" text-anchor="middle" font-size="12" fill="#334">front view, 90 fps</text>
+  <text x="102" y="118" text-anchor="middle" font-size="12" fill="#334">hand press + release</text>
+
+  <!-- 2 point clouds -->
+  <rect x="215" y="30" width="165" height="110" rx="10" fill="#e9f6ee" stroke="#2a9d5c" stroke-width="1.5"/>
+  <text x="297" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e38">2. Point clouds</text>
+  <text x="297" y="82" text-anchor="middle" font-size="12" fill="#334">sponge front face</text>
+  <text x="297" y="100" text-anchor="middle" font-size="12" fill="#334">every frame</text>
+  <text x="297" y="118" text-anchor="middle" font-size="12" fill="#334">~1,600 points, 2 mm grid</text>
+
+  <!-- 3 press detection -->
+  <rect x="410" y="30" width="165" height="110" rx="10" fill="#e9f6ee" stroke="#2a9d5c" stroke-width="1.5"/>
+  <text x="492" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e38">3. Press detection</text>
+  <text x="492" y="82" text-anchor="middle" font-size="12" fill="#334">where it was pressed</text>
+  <text x="492" y="100" text-anchor="middle" font-size="12" fill="#334">how deep, over time</text>
+  <text x="492" y="118" text-anchor="middle" font-size="12" fill="#334">when the hand let go</text>
+
+  <!-- 4 mujoco -->
+  <rect x="605" y="30" width="165" height="110" rx="10" fill="#fdf3e3" stroke="#d98a1c" stroke-width="1.5"/>
+  <text x="687" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#7a4a08">4. MuJoCo sponge</text>
+  <text x="687" y="82" text-anchor="middle" font-size="12" fill="#334">3D FEM soft body</text>
+  <text x="687" y="100" text-anchor="middle" font-size="12" fill="#334">indenter follows the dent,</text>
+  <text x="687" y="118" text-anchor="middle" font-size="12" fill="#334">lifted away at release</text>
+
+  <!-- 5 fit -->
+  <rect x="800" y="30" width="160" height="110" rx="10" fill="#f3ecfb" stroke="#7d4cc2" stroke-width="1.5"/>
+  <text x="880" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#4a2580">5. CMA-ES fit</text>
+  <text x="880" y="82" text-anchor="middle" font-size="12" fill="#334">compare sim vs real:</text>
+  <text x="880" y="100" text-anchor="middle" font-size="12" fill="#334">surface + spring-back</text>
+  <text x="880" y="118" text-anchor="middle" font-size="12" fill="#334">-&gt; material ν, τ</text>
+
+  <!-- arrows -->
+  <line x1="187" y1="85" x2="212" y2="85" stroke="#5b6472" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="382" y1="85" x2="407" y2="85" stroke="#5b6472" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="577" y1="85" x2="602" y2="85" stroke="#5b6472" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="772" y1="85" x2="797" y2="85" stroke="#5b6472" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- feedback loop: fit -> new material -> sim -->
+  <path d="M880 142 V172 H687 V145" fill="none" stroke="#7d4cc2" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a)"/>
+  <text x="783" y="190" text-anchor="middle" font-size="12" fill="#4a2580">try a new material, repeat</text>
+
+  <!-- output -->
+  <text x="490" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d2430">Result: a fitted 3D sponge model that predicts how the sponge springs back on presses it never saw</text>
+</svg>

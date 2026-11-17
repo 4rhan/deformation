@@ -1,0 +1,53 @@
+[project]
+name = "softfit"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "cma>=4.5.0",
+    "matplotlib>=3.11.2",
+    "mujoco>=4.0.0",
+    "numpy>=2.5.4",
+    "opencv-contrib-python>=5.0.0.93",
+    "pyrealsense2>=2.59.1.11053",
+    "scipy>=1.18.1",
+]
+
+[tool.uv]
+# the exact versions this project was developed and tested with (keeps the lock on known-good builds)
+constraint-dependencies = [
+    "anyio==4.16.0",
+    "click==8.5.1",
+    "cma==4.5.0",
+    "contourpy==1.4.0",
+    "cycler==0.12.1",
+    "filelock==4.2.9",
+    "fonttools==4.68.0",
+    "fsspec==2026.9.0",
+    "glfw==2.11.0",
+    "h11==0.16.0",
+    "hf-xet==1.8.0",
+    "httpcore2==2.16.0",
+    "httpx2==2.16.0",
+    "huggingface-hub==2.4.0",
+    "idna==3.20",
+    "kiwisolver==1.5.1",
+    "matplotlib==3.11.2",
+    "mujoco==4.0.0",
+    "mujoco-core==4.0.0",
+    "mujoco-studio==4.0.0",
+    "numpy==2.5.4",
+    "opencv-contrib-python==5.0.0.93",
+    "packaging==26.3",
+    "pillow==13.0.0",
+    "pyopengl==3.1.10",
+    "pyparsing==3.3.3",
+    "pyrealsense2==2.59.1.11053",
+    "python-dateutil==4.0.0",
+    "pyyaml==6.0.3",
+    "scipy==1.18.1",
+    "tqdm==4.70.1",
+    "truststore==0.10.5",
+    "typing-extensions==4.16.0",
+    "tzdata==2026.6",
+    "websockets==17.4",
+]

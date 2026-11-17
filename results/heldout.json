@@ -1,0 +1,44 @@
+{
+ "params": {
+  "young": 20000.000000000004,
+  "poisson": 0.05223145893240448,
+  "damping": 0.6886580005774761
+ },
+ "fixed": {
+  "young": 20000.0
+ },
+ "test": {
+  "press_02": {
+   "springback_rmse_pct": 4.405168830403159,
+   "x_mm": -2.473220613264342,
+   "ok": true
+  },
+  "press_05": {
+   "springback_rmse_pct": 3.4014683727885138,
+   "x_mm": -32.15956713836669,
+   "ok": true
+  },
+  "press_06": {
+   "springback_rmse_pct": 8.128345915466566,
+   "x_mm": 36.077073486036255,
+   "ok": true
+  }
+ },
+ "train": {
+  "press_01": {
+   "springback_rmse_pct": 3.188522620464159,
+   "x_mm": 2.6427627838173158,
+   "ok": true
+  },
+  "press_03": {
+   "springback_rmse_pct": 5.482079797751648,
+   "x_mm": -40.41465455948275,
+   "ok": true
+  },
+  "press_04": {
+   "springback_rmse_pct": 3.435614560344311,
+   "x_mm": 37.652040544731925,
+   "ok": true
+  }
+ }
+}
