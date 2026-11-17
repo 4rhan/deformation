@@ -65,6 +65,7 @@ def main():
     test, tr_out = out[:len(a.test)], out[len(a.test):]
 
     od = Path(a.out) if a.out else Path(a.fit).parent
+    od.mkdir(parents=True, exist_ok=True)
     fig, axs = plt.subplots(len(test), 1, figsize=(10, 2.6 * len(test)), sharex=True, squeeze=False)
     for i, (ax, r) in enumerate(zip(axs[:, 0], test), 1):
         ax.plot(r["t"], r["real_raw"], color="#2a7", lw=0.5, alpha=0.3)
